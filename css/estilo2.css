@@ -412,6 +412,7 @@ img {
     font-size: 50px;
 }
 
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -484,6 +485,7 @@ img {
         position: relative;
         right: 0;
         bottom: -12px;
+        bottom: -10px;
         gap: 15px;
         padding-bottom: 8px;
     }
@@ -491,6 +493,8 @@ img {
     .side-nav a {
         padding: 10px 20px;
         font-size: 16px;
+        padding: 10px 18px;
+        font-size: 15px;
     }
 
         right: auto;
@@ -498,15 +502,21 @@ img {
 
         width: 100%;
     /* ---------- CHARACTERS ---------- */
+    /* =====================================================
+       CHARACTERS
+       ===================================================== */
 
     .characters {
         width: 94%;
         margin-top: 35px;
         margin-bottom: 130px;
+        max-width: 900px;
+        margin: 35px auto 130px;
     }
 
     .characters h2 {
         font-size: 2.1rem;
+        font-size: 2rem;
         margin-bottom: 20px;
     }
 
@@ -518,7 +528,18 @@ img {
         grid-template-columns: 0.9fr 1.6fr 0.9fr;
         gap: 10px;
         padding: 14px;
+        width: 680px;
+        max-width: 100%;
+
+        grid-template-columns: 0.85fr 1.5fr 0.85fr;
+
+        gap: 9px;
+        padding: 13px;
+
+        border-width: 2px;
         border-radius: 18px;
+
+        box-shadow: 5px 5px 0 #F0C5D4;
     }
 
 
@@ -527,7 +548,14 @@ img {
     .photo-left,
     .photo-right {
         border-radius: 13px;
+        border-width: 2px;
+        border-radius: 12px;
         padding: 4px;
+    }
+
+    .photo-left img,
+    .photo-right img {
+        border-radius: 8px;
     }
 
 
@@ -536,6 +564,9 @@ img {
     .name-oval {
         padding: 8px;
         border-radius: 40px;
+        border-width: 2px;
+        padding: 7px;
+        border-radius: 35px;
     }
 
     .name-oval h3 {
@@ -548,20 +579,39 @@ img {
     .info-box,
     .text-box {
         padding: 8px 10px;
+    .info-box {
+        border-width: 1.5px;
+        border-radius: 10px;
+        padding: 7px 9px;
     }
 
     .info-box p {
         margin: 4px 0;
         font-size: 0.78rem;
+        padding-bottom: 3px;
+        font-size: 0.75rem;
     }
 
     .text-box p {
         font-size: 0.73rem;
         line-height: 1.35;
+
+    /* ---------- TEXT ---------- */
+
+    .text-box {
+        border-width: 1.5px;
+        border-radius: 10px;
+        padding: 7px 9px;
     }
 
     .text-title {
         font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+
+    .text-box p {
+        font-size: 0.72rem;
+        line-height: 1.3;
     }
 
 
@@ -570,14 +620,20 @@ img {
     .mini-box {
         padding: 6px 8px;
         gap: 4px;
+        border-width: 1.5px;
+        border-radius: 10px;
+        padding: 5px 7px;
+        gap: 3px;
     }
 
     .mini-icons {
         font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .barcode {
         font-size: 42px;
+        font-size: 38px;
     }
 }
 
@@ -592,9 +648,11 @@ img {
     /* =====================================================
        HEADER
        ===================================================== */
+    /* ---------- HEADER ---------- */
 
     .profile-header {
         padding-bottom: 25px;
+        padding-bottom: 20px;
     }
 
     .banner {
@@ -605,10 +663,13 @@ img {
         justify-content: center;
         flex-wrap: wrap;
         align-items: flex-start;
+        height: 180px;
+        padding: 15px 18px;
     }
 
     .banner h1 {
         font-size: clamp(48px, 14vw, 62px);
+        font-size: clamp(45px, 13vw, 58px);
         letter-spacing: 2px;
         line-height: 0.95;
     }
@@ -616,16 +677,20 @@ img {
     .banner p {
         font-size: 16px;
         line-height: 1;
+        font-size: 15px;
     }
 
 
     /* =====================================================
        PROFILE AREA
        ===================================================== */
+    /* ---------- PROFILE ---------- */
 
     .profile-area2 {
         width: 92%;
         height: 70px;
+        width: 94%;
+        height: 65px;
     }
 
     .profile-side {
@@ -636,6 +701,8 @@ img {
         padding: 0 10px 10px;
 
         align-items: flex-end;
+        top: -75px;
+        gap: 9px;
     }
 
 
@@ -645,6 +712,8 @@ img {
         width: 125px;
         height: 125px;
 
+        width: 115px;
+        height: 115px;
         border-width: 5px;
         outline-width: 2px;
     }
@@ -653,6 +722,7 @@ img {
     /* =====================================================
        SIDE NAV
        ===================================================== */
+    /* ---------- MENU ---------- */
 
     .side-nav {
         position: absolute;
@@ -667,6 +737,7 @@ img {
 
         gap: 7px;
 
+        gap: 6px;
         padding: 0;
     }
 
@@ -676,6 +747,8 @@ img {
         padding: 8px 13px;
 
         font-size: 14px;
+        padding: 7px 11px;
+        font-size: 13px;
         letter-spacing: 0.5px;
 
         white-space: nowrap;
@@ -691,8 +764,10 @@ img {
         width: 92%;
         margin: 30px auto 100px;
         width: 94%;
+        max-width: 600px;
 
         margin: 30px auto 90px;
+        margin: 25px auto 90px;
     }
 
     .characters h2 {
@@ -700,6 +775,9 @@ img {
         font-size: 1.8rem;
         margin-bottom: 18px;
         padding-bottom: 6px;
+        font-size: 1.7rem;
+        margin-bottom: 16px;
+        padding-bottom: 5px;
     }
 
 
@@ -723,12 +801,22 @@ img {
         padding: 12px;
     }
         gap: 7px;
+        width: 100%;
 
         padding: 10px;
+        grid-template-columns:
+            minmax(0, 0.78fr)
+            minmax(0, 1.5fr)
+            minmax(0, 0.78fr);
+
+        gap: 6px;
+
+        padding: 8px;
 
     /* ---------- PHOTOS ---------- */
         border-width: 2px;
         border-radius: 16px;
+        border-radius: 14px;
 
     .photo-left {
         grid-column: 1;
@@ -754,6 +842,7 @@ img {
         border-width: 2px;
         border-radius: 10px;
 
+        border-radius: 9px;
         padding: 3px;
     }
 
@@ -761,6 +850,7 @@ img {
     .photo-left img,
     .photo-right img {
         border-radius: 7px;
+        border-radius: 6px;
     }
 
 
@@ -776,12 +866,15 @@ img {
         border-radius: 30px;
 
         padding: 8px;
+        border-radius: 25px;
         padding: 5px;
     }
 
     .name-oval h3 {
         font-size: 25px;
         font-size: clamp(17px, 4.5vw, 23px);
+        font-size: clamp(15px, 4vw, 21px);
+        letter-spacing: 0;
     }
 
 
@@ -795,19 +888,25 @@ img {
         grid-row: 4;
         border-width: 1.5px;
         border-radius: 8px;
+        border-radius: 7px;
 
         padding: 6px 7px;
+        padding: 5px 6px;
     }
 
     .info-box p {
         margin: 3px 0;
+        margin: 2px 0;
 
     /* ---------- TEXT ---------- */
         font-size: 0.63rem;
+        font-size: 0.58rem;
 
         line-height: 1.2;
+        line-height: 1.15;
 
         padding-bottom: 3px;
+        padding-bottom: 2px;
     }
 
 
@@ -820,18 +919,23 @@ img {
         grid-row: 5;
         border-width: 1.5px;
         border-radius: 8px;
+        border-radius: 7px;
 
         padding: 6px 7px;
+        padding: 5px 6px;
     }
 
     .text-title {
         font-size: 0.72rem;
+        font-size: 0.68rem;
         margin-bottom: 3px;
     }
 
     .text-box p {
         font-size: 0.62rem;
         line-height: 1.25;
+        font-size: 0.57rem;
+        line-height: 1.22;
     }
 
     /* ---------- MINI BOX ---------- */
@@ -847,16 +951,20 @@ img {
         border-radius: 8px;
 
         padding: 4px 5px;
+        border-radius: 7px;
 
+        padding: 3px 4px;
         gap: 2px;
     }
 
     .mini-icons {
         font-size: 0.65rem;
+        font-size: 0.6rem;
     }
 
     .barcode {
         font-size: 30px;
+        font-size: 28px;
     }
 }
 
@@ -880,16 +988,20 @@ img {
         text-align: center;
         height: 170px;
         padding: 12px 15px;
+        height: 165px;
+        padding: 12px 14px;
     }
 
     .banner h1 {
         font-size: 42px;
         font-size: clamp(42px, 14vw, 55px);
+        font-size: clamp(40px, 13vw, 52px);
         letter-spacing: 1px;
     }
 
     .banner p {
         font-size: 14px;
+        font-size: 13px;
     }
 
 
@@ -898,12 +1010,16 @@ img {
     .profile-area2 {
         width: 94%;
         height: 65px;
+        width: 95%;
+        height: 58px;
     }
 
     .profile-side {
         top: -55px;
         top: -70px;
         gap: 7px;
+        top: -65px;
+        gap: 6px;
     }
 
     .profile-picture {
@@ -912,6 +1028,8 @@ img {
         width: 105px;
         height: 105px;
 
+        width: 100px;
+        height: 100px;
         border-width: 4px;
     }
 
@@ -921,6 +1039,7 @@ img {
     .side-nav {
         gap: 7px;
         gap: 5px;
+        gap: 4px;
     }
 
     .side-nav a {
@@ -928,6 +1047,8 @@ img {
         font-size: 14px;
         padding: 7px 10px;
         font-size: 12px;
+        padding: 6px 9px;
+        font-size: 11px;
     }
 
 
@@ -940,17 +1061,23 @@ img {
         margin-top: 20px;
         width: 96%;
         margin-top: 25px;
+        margin-top: 22px;
     }
 
     .characters h2 {
         font-size: 1.7rem;
         font-size: 1.55rem;
         margin-bottom: 14px;
+        font-size: 1.5rem;
+        margin-bottom: 13px;
     }
 
 
     /* CARD */
     /* ---------- CARD ---------- */
+    /* =====================================================
+       SMALL CARD
+       ===================================================== */
 
     .character {
         grid-template-columns: 1fr;
@@ -963,8 +1090,20 @@ img {
 
         gap: 5px;
         padding: 7px;
+        /* misma distribución de 3 columnas */
 
         border-radius: 13px;
+        grid-template-columns:
+            minmax(0, 0.72fr)
+            minmax(0, 1.5fr)
+            minmax(0, 0.72fr);
+
+        gap: 4px;
+        padding: 6px;
+
+        border-radius: 12px;
+
+        box-shadow: 3px 3px 0 #F0C5D4;
     }
 
 
@@ -976,6 +1115,7 @@ img {
         grid-row: auto;
         padding: 2px;
         border-radius: 8px;
+        border-radius: 7px;
     }
 
         min-height: 250px;
@@ -992,11 +1132,14 @@ img {
         grid-row: auto;
         padding: 4px;
         border-radius: 22px;
+        padding: 3px;
+        border-radius: 20px;
     }
 
     .name-oval h3 {
         font-size: 22px;
         font-size: clamp(14px, 4vw, 19px);
+        font-size: clamp(13px, 3.8vw, 18px);
     }
 
 
@@ -1009,10 +1152,14 @@ img {
     .text-box {
         border-radius: 6px;
         padding: 5px;
+    .info-box {
+        padding: 4px;
+        border-radius: 5px;
     }
 
     .info-box p {
         font-size: 0.52rem;
+        font-size: 0.49rem;
         margin: 2px 0;
         padding-bottom: 2px;
     }
@@ -1023,14 +1170,22 @@ img {
         grid-row: auto;
     /* ---------- TEXT ---------- */
 
+    .text-box {
+        padding: 4px;
+        border-radius: 5px;
+    }
+
     .text-title {
         font-size: 0.63rem;
+        font-size: 0.59rem;
         margin-bottom: 2px;
     }
 
     .text-box p {
         font-size: 0.51rem;
         line-height: 1.2;
+        font-size: 0.49rem;
+        line-height: 1.18;
     }
 
 
@@ -1041,16 +1196,20 @@ img {
         grid-row: auto;
         padding: 3px;
         border-radius: 6px;
+        padding: 2px 3px;
+        border-radius: 5px;
         gap: 1px;
     }
 
     .mini-icons {
         font-size: 0.55rem;
+        font-size: 0.5rem;
     }
 
     .barcode {
         font-size: 40px;
         font-size: 24px;
+        font-size: 22px;
     }
 
-}
+}}
