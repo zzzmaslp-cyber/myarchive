@@ -1,0 +1,532 @@
+@font-face {
+    font-family: "mcr";
+    src: url("../fonts/MCR.ttf");
+}
+@font-face {
+    font-family: "emo";
+    src: url("../fonts/Intense\ Emotion.otf");
+}
+@font-face {
+    font-family: "emo2";
+    src: url("../fonts/PO.ttf");
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    background-color: #020409;
+
+    /* ---------- BACKGROUND IMAGE ---------- */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.60)
+        ),
+        url("../img/illibg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #ffdcdc;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* ---------- DARK VIGNETTE ---------- */
+
+/*
+   Esta capa oscurece especialmente las esquinas.
+   No necesitas crear otra imagen para esto.
+*/
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    background:
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(0, 0, 0, 0.20) 60%,
+            rgba(0, 0, 0, 0.70) 100%
+        );
+}
+
+
+/* ---------- LINKS ---------- */
+
+a {
+    color: #ff5555;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: white;
+    background: #640707;
+}
+
+
+/* ---------- MAIN PAGE ---------- */
+
+.myspace {
+    position: relative;
+    z-index: 2;
+    width: 900px;
+    max-width: 95%;
+    margin: 25px auto 60px;
+    background: rgba(5, 8, 14, 0.94);
+    border: 2px solid #640707;
+    box-shadow:
+        0 0 20px rgba(83, 4, 4, 0.629)
+        8px 8px 0 #020305;
+}
+
+
+/* ---------- TOP ---------- */
+
+.top {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    background: #020409;
+    border-bottom: 2px solid #640707;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: white;
+}
+
+.top-links {
+    font-size: 12px;
+}
+
+
+/* ---------- PROFILE HEADER ---------- */
+
+.profile-header {
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    background:
+        linear-gradient(
+            90deg,
+            #5b1019,
+            #1e0606
+        );
+    border-bottom: 1px solid #b51d1d;
+}
+
+.profile-header h1 {
+    margin: 0;
+    color: white;
+    font-family: "mcr";
+    font-size: 32px;
+    text-shadow:
+        2px 2px #a00707,
+        4px 4px #33070b;
+}
+
+/* pequeño detalle rojo */
+
+.profile-header h1::after {
+    content: " ♥";
+    color: #d52b3f;
+    font-size: 18px;
+}
+
+.status {
+    margin: 5px 0 0;
+    color: #ff6565;
+    font-size: 11px;
+}
+
+.status::first-letter {
+    color: #d52b3f;
+}
+
+
+/* ---------- PROFILE GRID ---------- */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 18px;
+    padding: 20px;
+        font-family: "emo";
+    font-size: 14px;
+    word-spacing: 3px;
+    letter-spacing: 1.2px;
+}
+
+
+/* ---------- LEFT COLUMN ---------- */
+
+.left-column {
+    padding-right: 18px;
+    border-right: 1px dotted #b73131;
+}
+
+
+/* ---------- PROFILE PICTURE ---------- */
+
+.profile-picture {
+    padding: 7px;
+    background: #02050a;
+    border: 2px solid #d02525;
+    box-shadow:
+        5px 5px 0 #020305,
+        -2px -2px 0 #57101a;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 230px;
+    display: block;
+    object-fit: cover;
+}
+
+.photo-caption {
+    color: #cf7c7c;
+    font-size: 10px;
+    margin: 8px 0 18px;
+    text-align: center;
+}
+
+
+/* ---------- BOXES ---------- */
+
+.box {
+    margin-bottom: 18px;
+    padding: 12px;
+    background: rgba(7, 13, 22, 0.95);
+    border: 1px solid #8e2222;
+}
+
+.box h2 {
+    margin: -12px -12px 12px;
+    padding: 7px 10px;
+    background:
+        linear-gradient(
+            90deg,
+            #480909,
+            #210606
+        );
+    border-bottom: 1px solid #b82828;
+    color: white;
+    font-family: "emo";
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* rojo MUY sutil */
+
+.box h2::first-letter {
+    color: #d52b3f;
+}
+
+.box h3 {
+    color: #ff5454;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.box p {
+    line-height: 1.5;
+}
+
+.box a {
+    line-height: 1.5;
+    font-family: "emo2";
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-box a {
+    display: block;
+    font-family: "emo";
+    word-spacing: 3px;
+    letter-spacing: 1.2px;
+    padding: 5px 2px;
+    border-bottom: 1px dotted #702323;
+    text-decoration: none;
+}
+
+.contact-box a:last-child {
+    border-bottom: none;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about p {
+    color: #e8c9c9;
+}
+
+
+/* ---------- MUSIC ---------- */
+
+.song {
+    display: flex;
+        font-family: "emo";
+    word-spacing: 3px;
+    letter-spacing: 1.2px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    background: #03070d;
+    border: 1px solid #781717;
+}
+
+.album {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(
+            135deg,
+            #8f0a0a,
+            #2b0707
+        );
+
+    border: 2px solid #ff6464;
+
+    color: white;
+
+    font-size: 25px;
+
+    box-shadow:
+        2px 2px 0 #5b1019;
+}
+
+.song-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.song-info strong {
+    color: white;
+}
+
+.song-info span {
+    color: #e86363;
+
+    font-family: monospace;
+}
+
+.music-note {
+    color: #d67d7d;
+
+    font-size: 10px;
+}
+
+
+/* ---------- TOP 8 ---------- */
+
+.top-eight {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.friend {
+    text-align: center;
+}
+
+.friend-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-bottom: 5px;
+    background: #210707;
+    border: 1px solid #b52626;
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.friend-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.friend-img img:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+.friend a {
+    font-size: 15px;
+}
+
+
+/* ---------- COMMENTS ---------- */
+
+.small {
+    color: #b77272;
+
+    font-size: 10px;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+    border-top: 1px dotted #752727;
+}
+
+.comment-pic {
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background: #4c0909;
+    border: 1px solid #c43232;
+    box-shadow: 2px 2px 0 #0b0505;
+}
+
+.comment-pic img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.comment-pic:hover img {
+    transform: scale(1.08);
+}
+
+.comment:nth-child(3) .comment-pic {
+    border-color: #8a1d2b;
+}
+
+.comment p {
+    margin: 5x 0;
+
+    color: #ecd1d1;
+}
+
+.comment small {
+    color: #9e6666;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 18px;
+
+    text-align: center;
+
+    background: #030508;
+
+    border-top: 2px solid #7d1717;
+
+    color: #9e6666;
+
+    font-size: 10px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+.counter {
+    color: #ad3333;
+
+    font-family: monospace;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column {
+        padding-right: 0;
+
+        border-right: none;
+    }
+
+    .top-eight {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .myspace {
+        max-width: 100%;
+
+        border-left: none;
+        border-right: none;
+    }
+
+    .profile-grid {
+        padding: 12px;
+    }
+
+    .top {
+        flex-direction: column;
+
+        height: auto;
+
+        gap: 8px;
+
+        padding: 10px;
+    }
+}

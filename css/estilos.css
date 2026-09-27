@@ -1,0 +1,1405 @@
+/* ---------- FONTS ---------- */
+
+@font-face {
+    font-family: "Pretty On The Inside";
+    src: url("../fonts/poti.ttf");
+}
+
+@font-face {
+    font-family: "Hillos";
+    src: url("../fonts/Hillos.otf");
+}
+
+@font-face {
+    font-family: "Cavalhatriz";
+    src: url("../fonts/Cavalhatriz.ttf");
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/Coolvetica.otf");
+}
+
+@font-face {
+    font-family: "Essays 1743";
+    src: url("../fonts/Essays1743.ttf");
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #ffffff;
+    color: #604734;
+
+    font-family: "Hillos", Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background-image: url(../img/bgpink.png);
+    background-size: 200px auto;
+    background-repeat: repeat;
+
+    opacity: 78%;
+
+    z-index: -1;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.profile-header {
+    width: 100%;
+    position: relative;
+
+    padding-bottom: 35px;
+
+    overflow: hidden;
+}
+
+/* ---------- FONDO DEL HEADER ---------- */
+
+.profile-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../img/piano.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    transform: scale(1.05);
+    z-index: 0;
+}
+
+/* ---------- CONTENIDO ---------- */
+
+.profile-header > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+.banner {
+    height: 250px;
+    background-image: url(../img/banner.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 6px solid #F0C5D4;
+}
+
+
+/* texto pequeño de arriba */
+.banner p.eyebrow {
+    margin: 0px 0px 8px 0px;
+    color: #604734;
+    font-family: "Coolvetica", sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+
+/* MY ARCHIVE */
+.banner h1 {
+    margin: 0px 0px 9px 0px;
+    color: #604734;
+    font-family: "Pretty On The Inside";
+    font-size: 87px;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+.banner p {
+    margin: 2px 0 0;
+    color: #604734;
+    font-family: "Hillos", sans-serif;
+    font-size: 20px;
+    line-height: 0.9;
+}
+
+
+/* ---------- PROFILE AREA ---------- */
+
+.profile-area {
+    width: 90%;
+    max-width: 1100px;
+    margin: -30px auto 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+/* ---------- CENTER ---------- */
+
+.profile-center {
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    
+}
+
+
+/* ---------- PROFILE PICTURE ---------- */
+
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: url("../img/ryro.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 7px solid #FCF7D9;
+    outline: 3px solid #604734;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(96, 71, 52, 0.25);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ---------- BIO ---------- */
+
+.profile-bio {
+    width: 400px;
+    margin-top: 18px;
+    padding: 14px;
+    background-color: #F6D8D6;
+    border: 2px solid #604734;
+    border-radius: 20px 60px;
+    text-align: center;
+}
+
+.profile-bio h2 {
+    margin: 0 0 5px;
+    color: #604734;
+    font-family: "Cavalhatriz", serif;
+    font-size: 1.5rem;
+}
+
+.profile-bio p {
+    margin: 0;
+    font-family: "Hillos", sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+/* ---------- SIDE NAV ---------- */
+
+.side-nav {
+    
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 90px;
+    padding-top: 2px;
+}
+
+.left-nav {
+    justify-content: flex-end;
+}
+
+.right-nav {
+    justify-content: flex-start;
+}
+
+.side-nav a {
+    padding: 12px 34px;
+    color: #604734;
+    background-color: #F0C5D4;
+    font-family: "Hillos", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.side-nav a:hover {
+    color: #FCF7D9;
+    background-color: #604734;
+    box-shadow: 5px 5px 0 #503b2a;
+
+    transform: translate(-2px, -2px);
+}
+
+
+/* ---------- MAIN NAV STRIP ---------- */
+
+.main-nav {
+    width: 90%;
+    max-width: 1000px;
+    margin: -20px auto 40px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.main-nav a {
+    padding: 6px 16px;
+
+    background-color: #604734;
+    color: #FCF7D9;
+
+    font-family: "Coolvetica", sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+
+    text-decoration: none;
+    border-radius: 999px;
+
+    transition: 0.2s ease;
+}
+
+.main-nav a:hover {
+    background-color: #F0C5D4;
+    color: #604734;
+}
+
+
+/* ---------- MAIN ---------- */
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+}
+
+
+/* ---------- ABOUT ME ---------- */
+
+.about-banner {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    margin-bottom: 40px;
+}
+
+
+/* ---------- IMAGE CARD ---------- */
+
+.about-image {
+    position: absolute;
+    top: 35px;       /* baja la imagen */
+    right: 0;       /* la pega al lado derecho */
+    width: 72%;
+    height: 300px;
+    background-color: #F6D8D6;
+    border: 2px solid #604734;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 5px 5px 0 rgba(96, 71, 52, 0.15);
+    z-index: 2;
+}
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* ---------- TEXT CARD ---------- */
+
+.about-text {
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    top: 220px;
+    min-height: 280px;
+    padding: 90px 45px 35px;
+    background-color: #FCF7D9;
+    border: 2px solid #604734;
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 rgba(96, 71, 52, 0.15);
+    z-index: 1;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.about-text h2 {
+    margin: 0 0 12px;
+    color: #604734;
+    font-family: "Cavalhatriz", serif;
+    font-size: 2rem;
+    border-bottom: 2px solid #F0C5D4;
+    padding-bottom: 6px;
+}
+
+
+/* ---------- TEXT ---------- */
+
+.about-text p {
+    margin: 8px 0;
+}
+
+.about-text h2 {
+    margin-top: 0;
+    color: #604734;
+    font-family: "Cavalhatriz", serif;
+    font-size: 2rem;
+    border-bottom: 2px solid #F0C5D4;
+    padding-bottom: 6px;
+}
+
+/* ---------- CONTENT ROWS ---------- */
+
+.content-row {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+
+    margin-bottom: 55px;
+
+    align-items: center;
+}
+
+
+/* ---------- IMAGE CARDS ---------- */
+
+.content-image {
+    position: relative;
+
+    height: 320px;
+
+    background-color: #F6D8D6;
+
+    border: 2px solid #604734;
+    border-radius: 12px 35px 12px 35px;
+
+    overflow: hidden;
+
+    box-shadow:
+        7px 7px 0 #F0C5D4,
+        10px 10px 0 rgba(96, 71, 52, 0.12);
+
+    transform: rotate(-2deg);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* efecto al pasar el mouse */
+
+.content-image:hover {
+    transform: rotate(0deg) translateY(-4px);
+
+    box-shadow:
+        9px 9px 0 #F0C5D4,
+        12px 12px 0 rgba(96, 71, 52, 0.15);
+}
+
+.content-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* ---------- SMALL IMAGE DECORATION ---------- */
+
+.content-image::after {
+    content: "♡";
+
+    position: absolute;
+
+    right: 12px;
+    bottom: 8px;
+
+    color: #FCF7D9;
+
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+
+    text-shadow: 1px 1px 0 #604734;
+}
+
+
+/* ---------- TEXT CARDS ---------- */
+
+.content-card {
+    position: relative;
+
+    background-color: #FCF7D9;
+
+    border: 2px solid #604734;
+
+    border-radius: 35px 12px 35px 12px;
+
+    padding: 35px 38px;
+
+    box-shadow:
+        -7px 7px 0 #F0C5D4,
+        -10px 10px 0 rgba(96, 71, 52, 0.10);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: 260px;
+}
+
+
+/* pequeño detalle arriba */
+
+.content-card::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 12px;
+    right: 18px;
+
+    color: #F0C5D4;
+
+    font-size: 22px;
+}
+
+
+/* ---------- TITLES ---------- */
+
+.content-card h2 {
+    margin: 0 0 15px;
+
+    color: #604734;
+
+    font-family: "Cavalhatriz", serif;
+
+    font-size: 1.9rem;
+
+    border-bottom: 2px solid #F0C5D4;
+
+    padding-bottom: 8px;
+}
+
+
+/* ---------- REVERSE ROWS ---------- */
+
+.content-row.reverse {
+    grid-template-columns: 1.1fr 0.9fr;
+}
+
+
+/* imagen del lado derecho */
+
+.content-row.reverse .content-image {
+    transform: rotate(2deg);
+}
+
+.content-row.reverse .content-image:hover {
+    transform: rotate(0deg) translateY(-4px);
+}
+
+
+/* ---------- LISTS ---------- */
+
+.content-card ul {
+    padding-left: 22px;
+    margin: 0;
+}
+
+.content-card li {
+    margin-bottom: 7px;
+}
+
+.content-card li::marker {
+    color: #F0C5D4;
+}
+
+.content-card h2 {
+    margin-top: 0;
+    color: #604734;
+    font-family: "Cavalhatriz", serif;
+    font-size: 1.7rem;
+
+    border-bottom: 2px solid #F0C5D4;
+
+    padding-bottom: 6px;
+}
+
+
+/* ---------- LISTS ---------- */
+
+ul {
+    padding-left: 22px;
+    margin: 0;
+}
+li {
+    margin-bottom: 4px;
+}
+li::marker {
+    color: #F0C5D4;
+}
+
+
+/* ---------- RECENT UPDATES ---------- */
+
+article {
+    background-color: #F6D8D6;
+    border-left: 6px solid #F0C5D4;
+    border-radius: 0 10px 10px 0;
+    padding: 12px 18px;
+}
+article h3 {
+    margin-top: 0;
+    margin-bottom: 6px;
+
+    color: #604734;
+
+    font-family: "Essays 1743", serif;
+    font-size: 1.05rem;
+}
+
+article p {
+    font-family: "Essays 1743", serif;
+    font-size: 0.95rem;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background-color: #604734;
+    color: #FCF7D9;
+
+    text-align: center;
+
+    padding: 30px 20px 25px;
+
+    border-top: 5px solid #F0C5D4;
+
+    font-family: "Coolvetica", sans-serif;
+    letter-spacing: 1px;
+
+    position: relative;
+}
+
+
+/* TÍTULO */
+
+.footer-title {
+    margin: 8px 0;
+
+    font-family: "Pretty On The Inside", sans-serif;
+    font-size: 2rem;
+
+    color: #F0C5D4;
+    letter-spacing: 3px;
+}
+
+/* TEXTO */
+footer p {
+    margin: 5px 0;
+}
+
+/* DECORACIONES */
+.footer-decoration {
+    color: #F0C5D4;
+
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+
+    opacity: 0.9;
+}
+
+/* ---------- SCROLL NAVBAR ---------- */
+
+.scroll-nav {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    width: 92%;
+    max-width: 1050px;
+    height: 62px;
+    background-color: #F0C5D4;
+    border: 2px solid #604734;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    z-index: 1000;
+    /* sombra rosita */
+    box-shadow:
+        0 5px 0 #FCF7D9,
+        0 8px 18px rgba(240, 197, 212, 0.45);
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Cuando aparece */
+
+.scroll-nav.show {
+    transform: translate(-50%, 0);
+}
+
+
+/* ---------- PERFIL ---------- */
+
+.scroll-profile {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: #604734;
+    font-family: "Cavalhatriz", sans-serif;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+
+/* ---------- FOTO DE PERFIL ---------- */
+
+.scroll-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-image: url(../img/ryro.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #FCF7D9;
+    outline: 2px solid #604734;
+    position: relative;
+    top: 22px;
+    flex-shrink: 0;
+    box-shadow:
+        0 4px 8px rgba(96, 71, 52, 0.2),
+        0 4px 12px rgba(240, 197, 212, 0.5);
+}
+
+
+/* ---------- LINKS ---------- */
+
+.scroll-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+.scroll-links a {
+    position: relative;
+    color: #604734;
+    font-family: "Hillos", sans-serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 6px 3px;
+    transition: 0.2s ease;
+}
+
+
+/* línea rosita debajo */
+
+.scroll-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FCF7D9;
+    border-radius: 999px;
+    transition: width 0.25s ease;
+}
+
+
+.scroll-links a:hover {
+    color: #604734;
+}
+
+
+.scroll-links a:hover::after {
+    width: 100%;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1000px) {
+
+    /* HEADER */
+
+    .banner {
+        height: 220px;
+        padding: 20px;
+    }
+
+    .banner h1 {
+        font-size: 68px;
+        letter-spacing: 3px;
+    }
+
+    .banner p {
+        font-size: 18px;
+    }
+
+
+    /* PROFILE */
+
+    .profile-area {
+        width: 94%;
+        gap: 15px;
+    }
+
+    .side-nav {
+        gap: 20px;
+    }
+
+    .side-nav a {
+        padding: 10px 22px;
+        font-size: 18px;
+    }
+
+
+    /* ABOUT */
+
+    .about-banner {
+        min-height: 520px;
+    }
+
+    .about-image {
+        width: 75%;
+    }
+
+    .about-text {
+        left: 3%;
+        right: 3%;
+        padding: 85px 35px 30px;
+    }
+
+
+    /* CONTENT */
+
+    .content-row {
+        gap: 25px;
+    }
+
+    .content-image {
+        height: 280px;
+    }
+
+    .content-card {
+        padding: 30px;
+    }
+
+
+    /* SCROLL NAV */
+
+    .scroll-nav {
+        width: 94%;
+        padding: 0 18px;
+    }
+
+    .scroll-profile {
+        font-size: 32px;
+    }
+
+    .scroll-avatar {
+        width: 65px;
+        height: 65px;
+    }
+
+    .scroll-links {
+        gap: 15px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* ---------- HEADER ---------- */
+
+    .profile-header {
+        padding-bottom: 25px;
+    }
+
+    .banner {
+        height: 200px;
+        padding: 15px;
+    }
+
+    .banner p.eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .banner h1 {
+        font-size: clamp(48px, 14vw, 65px);
+        letter-spacing: 2px;
+        line-height: 0.95;
+    }
+
+    .banner p {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+
+    /* ---------- PROFILE AREA ---------- */
+
+    .profile-area {
+        width: 92%;
+        margin: -20px auto 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 15px;
+    }
+
+
+    /* ---------- CENTER ---------- */
+
+    .profile-center {
+        width: 100%;
+        order: 1;
+    }
+
+
+    /* ---------- PROFILE PICTURE ---------- */
+
+    .profile-picture {
+        width: 155px;
+        height: 155px;
+
+        border-width: 6px;
+    }
+
+
+    /* ---------- BIO ---------- */
+
+    .profile-bio {
+        width: 100%;
+        max-width: 400px;
+
+        margin-top: 15px;
+
+        padding: 13px 15px;
+
+        border-radius: 18px 45px;
+    }
+
+    .profile-bio h2 {
+        font-size: 1.35rem;
+    }
+
+    .profile-bio p {
+        font-size: 0.95rem;
+    }
+
+
+    /* ---------- SIDE NAV ---------- */
+
+    .side-nav {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        gap: 10px;
+
+        padding: 0;
+
+        order: 2;
+    }
+
+    .left-nav,
+    .right-nav {
+        justify-content: center;
+    }
+
+    .side-nav a {
+        padding: 9px 18px;
+
+        font-size: 16px;
+        letter-spacing: 1px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ---------- MAIN NAV ---------- */
+
+    .main-nav {
+        width: 92%;
+
+        margin: 10px auto 30px;
+
+        gap: 6px;
+    }
+
+    .main-nav a {
+        padding: 6px 12px;
+
+        font-size: 0.78rem;
+    }
+
+
+    /* ---------- MAIN ---------- */
+
+    main {
+        width: 92%;
+        margin-bottom: 45px;
+    }
+
+
+    /* =====================================================
+       ABOUT
+       ===================================================== */
+
+    .about-banner {
+        width: 100%;
+
+        min-height: auto;
+
+        margin-bottom: 35px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* ---------- ABOUT IMAGE ---------- */
+
+    .about-image {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 92%;
+        height: 230px;
+
+        margin: 0 0 0 auto;
+
+        z-index: 2;
+    }
+
+
+    /* ---------- ABOUT TEXT ---------- */
+
+    .about-text {
+        position: relative;
+
+        left: auto;
+        right: auto;
+        top: auto;
+
+        width: 96%;
+
+        min-height: auto;
+
+        margin: -30px auto 0;
+
+        padding: 55px 22px 25px;
+
+        z-index: 1;
+    }
+
+    .about-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+
+    /* =====================================================
+       CONTENT ROWS
+       ===================================================== */
+
+    .content-row,
+    .content-row.reverse {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-bottom: 45px;
+
+        align-items: stretch;
+    }
+
+
+    /* ---------- IMAGES ---------- */
+
+    .content-image,
+    .content-row.reverse .content-image {
+        width: 94%;
+        height: 250px;
+
+        margin: 0 auto;
+
+        transform: rotate(-1.5deg);
+    }
+
+    .content-row.reverse .content-image {
+        transform: rotate(1.5deg);
+    }
+
+    .content-image:hover,
+    .content-row.reverse .content-image:hover {
+        transform: rotate(0deg) translateY(-3px);
+    }
+
+
+    /* ---------- TEXT CARDS ---------- */
+
+    .content-card {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 27px 23px;
+
+        border-radius: 28px 10px 28px 10px;
+
+        box-shadow:
+            -5px 5px 0 #F0C5D4,
+            -8px 8px 0 rgba(96, 71, 52, 0.10);
+    }
+
+
+    /* ---------- TITLES ---------- */
+
+    .content-card h2 {
+        font-size: 1.55rem;
+
+        margin-bottom: 12px;
+
+        padding-bottom: 6px;
+    }
+
+
+    /* ---------- LISTS ---------- */
+
+    .content-card ul {
+        padding-left: 20px;
+    }
+
+    .content-card li {
+        margin-bottom: 5px;
+    }
+
+
+    /* ---------- RECENT UPDATES ---------- */
+
+    article {
+        padding: 11px 15px;
+    }
+
+    article h3 {
+        font-size: 1rem;
+    }
+
+    article p {
+        font-size: 0.9rem;
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+        padding: 25px 15px 20px;
+    }
+
+    .footer-title {
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+    }
+
+
+ /* =========================================================
+   SCROLL NAVBAR — RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .scroll-nav {
+        width: 94%;
+        height: 58px;
+        padding: 0 18px;
+        border-radius: 20px;
+    }
+
+    .scroll-profile {
+        font-size: 30px;
+        gap: 8px;
+    }
+
+    .scroll-avatar {
+        width: 60px;
+        height: 60px;
+        top: 18px;
+    }
+
+    .scroll-links {
+        gap: 15px;
+    }
+
+    .scroll-links a {
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+    .scroll-nav {
+        width: calc(100% - 20px);
+        height: 54px;
+
+        padding: 0 12px;
+
+        border-radius: 18px;
+    }
+
+    .scroll-profile {
+        font-size: 22px;
+        gap: 7px;
+    }
+
+    .scroll-avatar {
+        width: 47px;
+        height: 47px;
+
+        top: 15px;
+
+        border-width: 3px;
+    }
+
+    .scroll-links {
+        gap: 10px;
+    }
+
+    .scroll-links a {
+        font-size: 0.72rem;
+        letter-spacing: 0;
+        padding: 5px 2px;
+    }
+}
+
+
+/* ---------- CELULARES PEQUEÑOS ---------- */
+
+@media (max-width: 430px) {
+
+    .scroll-nav {
+        width: calc(100% - 14px);
+        height: 50px;
+
+        padding: 0 9px;
+
+        border-radius: 16px;
+    }
+
+    .scroll-profile {
+        font-size: 19px;
+        gap: 5px;
+    }
+
+    .scroll-avatar {
+        width: 42px;
+        height: 42px;
+
+        top: 13px;
+
+        border-width: 2px;
+    }
+
+    .scroll-links {
+        gap: 7px;
+    }
+
+    .scroll-links a {
+        font-size: 0.66rem;
+        padding: 4px 1px;
+    }
+}
+
+    /* PROFILE */
+
+    .profile-picture {
+        width: 135px;
+        height: 135px;
+    }
+
+    .profile-bio {
+        padding: 12px;
+    }
+
+    .profile-bio h2 {
+        font-size: 1.2rem;
+    }
+
+    .profile-bio p {
+        font-size: 0.88rem;
+    }
+
+
+    /* SIDE BUTTONS */
+
+    .side-nav {
+        gap: 7px;
+    }
+
+    .side-nav a {
+        padding: 8px 13px;
+        font-size: 14px;
+    }
+
+
+    /* MAIN NAV */
+
+    .main-nav {
+        gap: 5px;
+    }
+
+    .main-nav a {
+        padding: 5px 9px;
+        font-size: 0.72rem;
+    }
+
+
+    /* ABOUT */
+
+    .about-image {
+        width: 94%;
+        height: 200px;
+    }
+
+    .about-text {
+        width: 98%;
+
+        padding: 50px 17px 22px;
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* CONTENT */
+
+    .content-image,
+    .content-row.reverse .content-image {
+        width: 92%;
+        height: 210px;
+    }
+
+    .content-card {
+        padding: 23px 18px;
+    }
+
+    .content-card h2 {
+        font-size: 1.4rem;
+    }
+
+
+    /* SCROLL NAV */
+
+    .scroll-nav {
+        height: 50px;
+        padding: 0 9px;
+    }
+
+    .scroll-profile {
+        font-size: 20px;
+    }
+
+    .scroll-avatar {
+        width: 46px;
+        height: 46px;
+        top: 14px;
+    }
+
+    .scroll-links {
+        gap: 7px;
+    }
+
+    .scroll-links a {
+        font-size: 0.7rem;
+    }
+
+}
