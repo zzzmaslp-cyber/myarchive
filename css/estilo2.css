@@ -412,26 +412,40 @@ img {
     font-size: 50px;
 }
 
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
 /* ---------- MOBILE ---------- */
 
 @media (max-width: 800px) {
+/* =========================================================
+   TABLET
+   ========================================================= */
 
     /* ---------- BANNER ---------- */
+@media (max-width: 1000px) {
+
+    /* ---------- HEADER ---------- */
 
     .banner {
         height: 180px;
         padding-left: 25%;
         padding-right: 20px;
+        height: 170px;
+        padding-left: 28%;
     }
 
     .banner h1 {
         font-size: 55px;
         letter-spacing: 2px;
+        font-size: 65px;
+        letter-spacing: 3px;
     }
 
     .banner p {
         font-size: 15px;
+        font-size: 18px;
     }
 
 
@@ -439,7 +453,6 @@ img {
 
     .profile-area2 {
         width: 92%;
-        height: auto;
     }
 
     .profile-side {
@@ -452,12 +465,16 @@ img {
         flex-direction: column;
         align-items: center;
 
+        top: -115px;
         gap: 15px;
     }
 
     .profile-picture {
         width: 160px;
         height: 160px;
+        width: 165px;
+        height: 165px;
+        border-width: 6px;
     }
 
 
@@ -465,74 +482,60 @@ img {
 
     .side-nav {
         position: relative;
+        right: 0;
+        bottom: -12px;
+        gap: 15px;
+        padding-bottom: 8px;
+    }
+
+    .side-nav a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 
         right: auto;
         bottom: auto;
 
         width: 100%;
-
-        justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 10px;
-        padding: 0 10px 10px;
-    }
-
-    .side-nav a {
-        padding: 12px 20px;
-        font-size: 15px;
-    }
-
-
     /* ---------- CHARACTERS ---------- */
 
     .characters {
-        width: 92%;
-        margin: 30px auto 100px;
+        width: 94%;
+        margin-top: 35px;
+        margin-bottom: 130px;
     }
 
     .characters h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
+        margin-bottom: 20px;
     }
 
 
     /* ---------- CHARACTER CARD ---------- */
 
     .character {
-        width: 100%;
-
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto auto;
-
+        width: 700px;
+        grid-template-columns: 0.9fr 1.6fr 0.9fr;
         gap: 10px;
-        padding: 12px;
+        padding: 14px;
+        border-radius: 18px;
     }
 
 
     /* ---------- PHOTOS ---------- */
 
-    .photo-left {
-        grid-column: 1;
-        grid-row: 1 / 3;
-
-        min-height: 220px;
-    }
-
+    .photo-left,
     .photo-right {
-        grid-column: 2;
-        grid-row: 1 / 3;
-
-        min-height: 220px;
+        border-radius: 13px;
+        padding: 4px;
     }
 
 
     /* ---------- NAME ---------- */
 
     .name-oval {
-        grid-column: 1 / 3;
-        grid-row: 3;
-
         padding: 8px;
+        border-radius: 40px;
     }
 
     .name-oval h3 {
@@ -542,32 +545,332 @@ img {
 
     /* ---------- INFO ---------- */
 
-    .info-box {
-        grid-column: 1 / 3;
-        grid-row: 4;
+    .info-box,
+    .text-box {
+        padding: 8px 10px;
     }
 
+    .info-box p {
+        margin: 4px 0;
+        font-size: 0.78rem;
+    }
 
-    /* ---------- TEXT ---------- */
+    .text-box p {
+        font-size: 0.73rem;
+        line-height: 1.35;
+    }
 
-    .text-box {
-        grid-column: 1 / 3;
-        grid-row: 5;
+    .text-title {
+        font-size: 0.9rem;
     }
 
 
     /* ---------- MINI BOX ---------- */
 
     .mini-box {
-        grid-column: 1 / 3;
-        grid-row: 6;
+        padding: 6px 8px;
+        gap: 4px;
     }
 
+    .mini-icons {
+        font-size: 0.8rem;
+    }
+
+    .barcode {
+        font-size: 42px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+
+    /* =====================================================
+       HEADER
+       ===================================================== */
+
+    .profile-header {
+        padding-bottom: 25px;
+    }
+
+    .banner {
+        height: 185px;
+
+        padding: 15px 20px;
+
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .banner h1 {
+        font-size: clamp(48px, 14vw, 62px);
+        letter-spacing: 2px;
+        line-height: 0.95;
+    }
+
+    .banner p {
+        font-size: 16px;
+        line-height: 1;
+    }
+
+
+    /* =====================================================
+       PROFILE AREA
+       ===================================================== */
+
+    .profile-area2 {
+        width: 92%;
+        height: 70px;
+    }
+
+    .profile-side {
+        top: -80px;
+        left: 0;
+
+        gap: 10px;
+        padding: 0 10px 10px;
+
+        align-items: flex-end;
+    }
+
+
+    /* ---------- PROFILE PICTURE ---------- */
+
+    .profile-picture {
+        width: 125px;
+        height: 125px;
+
+        border-width: 5px;
+        outline-width: 2px;
+    }
+
+
+    /* =====================================================
+       SIDE NAV
+       ===================================================== */
+
+    .side-nav {
+        position: absolute;
+
+        right: 0;
+        bottom: -5px;
+
+        width: auto;
+
+        display: flex;
+        justify-content: flex-end;
+
+        gap: 7px;
+
+        padding: 0;
+    }
+
+    .side-nav a {
+        padding: 12px 20px;
+        font-size: 15px;
+        padding: 8px 13px;
+
+        font-size: 14px;
+        letter-spacing: 0.5px;
+
+        white-space: nowrap;
+    }
+
+
+    /* ---------- CHARACTERS ---------- */
+    /* =====================================================
+       CHARACTERS
+       ===================================================== */
+
+    .characters {
+        width: 92%;
+        margin: 30px auto 100px;
+        width: 94%;
+
+        margin: 30px auto 90px;
+    }
+
+    .characters h2 {
+        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 18px;
+        padding-bottom: 6px;
+    }
+
+
+    /* ---------- CHARACTER CARD ---------- */
+    /* =====================================================
+       CHARACTER CARD
+       ===================================================== */
+
+    .character {
+        width: 100%;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        /*
+         * Seguimos usando 3 columnas.
+         * Esto conserva la apariencia de "ID card".
+         */
+        grid-template-columns: 0.8fr 1.45fr 0.8fr;
+
+        gap: 10px;
+        padding: 12px;
+    }
+        gap: 7px;
+
+        padding: 10px;
+
+    /* ---------- PHOTOS ---------- */
+        border-width: 2px;
+        border-radius: 16px;
+
+    .photo-left {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        box-shadow: 4px 4px 0 #F0C5D4;
+    }
+
+        min-height: 220px;
+    .character:hover {
+        transform: translateY(-3px);
+        box-shadow: 5px 5px 0 #F0C5D4;
+    }
+
+
+    /* =====================================================
+       PHOTOS
+       ===================================================== */
+
+    .photo-left,
+    .photo-right {
+        grid-column: 2;
+        grid-row: 1 / 3;
+        border-width: 2px;
+        border-radius: 10px;
+
+        padding: 3px;
+    }
+
+        min-height: 220px;
+    .photo-left img,
+    .photo-right img {
+        border-radius: 7px;
+    }
+
+
+    /* ---------- NAME ---------- */
+    /* =====================================================
+       NAME
+       ===================================================== */
+
+    .name-oval {
+        grid-column: 1 / 3;
+        grid-row: 3;
+        border-width: 2px;
+        border-radius: 30px;
+
+        padding: 8px;
+        padding: 5px;
+    }
+
+    .name-oval h3 {
+        font-size: 25px;
+        font-size: clamp(17px, 4.5vw, 23px);
+    }
+
+
+    /* ---------- INFO ---------- */
+    /* =====================================================
+       INFO BOX
+       ===================================================== */
+
+    .info-box {
+        grid-column: 1 / 3;
+        grid-row: 4;
+        border-width: 1.5px;
+        border-radius: 8px;
+
+        padding: 6px 7px;
+    }
+
+    .info-box p {
+        margin: 3px 0;
+
+    /* ---------- TEXT ---------- */
+        font-size: 0.63rem;
+
+        line-height: 1.2;
+
+        padding-bottom: 3px;
+    }
+
+
+    /* =====================================================
+       TEXT BOX
+       ===================================================== */
+
+    .text-box {
+        grid-column: 1 / 3;
+        grid-row: 5;
+        border-width: 1.5px;
+        border-radius: 8px;
+
+        padding: 6px 7px;
+    }
+
+    .text-title {
+        font-size: 0.72rem;
+        margin-bottom: 3px;
+    }
+
+    .text-box p {
+        font-size: 0.62rem;
+        line-height: 1.25;
+    }
+
+    /* ---------- MINI BOX ---------- */
+
+    /* =====================================================
+       MINI BOX
+       ===================================================== */
+
+    .mini-box {
+        grid-column: 1 / 3;
+        grid-row: 6;
+        border-width: 1.5px;
+        border-radius: 8px;
+
+        padding: 4px 5px;
+
+        gap: 2px;
+    }
+
+    .mini-icons {
+        font-size: 0.65rem;
+    }
+
+    .barcode {
+        font-size: 30px;
+    }
 }
 
 /* ---------- SMALL PHONES ---------- */
 
 @media (max-width: 500px) {
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+
+    /* ---------- HEADER ---------- */
 
     .banner {
         height: 160px;
@@ -575,10 +878,13 @@ img {
         padding-right: 20px;
         align-items: center;
         text-align: center;
+        height: 170px;
+        padding: 12px 15px;
     }
 
     .banner h1 {
         font-size: 42px;
+        font-size: clamp(42px, 14vw, 55px);
         letter-spacing: 1px;
     }
 
@@ -587,83 +893,164 @@ img {
     }
 
 
+    /* ---------- PROFILE ---------- */
+
+    .profile-area2 {
+        width: 94%;
+        height: 65px;
+    }
+
     .profile-side {
         top: -55px;
+        top: -70px;
+        gap: 7px;
     }
 
     .profile-picture {
         width: 140px;
         height: 140px;
+        width: 105px;
+        height: 105px;
+
+        border-width: 4px;
     }
 
 
+    /* ---------- MENU ---------- */
+
     .side-nav {
         gap: 7px;
+        gap: 5px;
     }
 
     .side-nav a {
         padding: 10px 14px;
         font-size: 14px;
+        padding: 7px 10px;
+        font-size: 12px;
     }
 
+
+    /* =====================================================
+       CHARACTERS
+       ===================================================== */
 
     .characters {
         width: 94%;
         margin-top: 20px;
+        width: 96%;
+        margin-top: 25px;
     }
 
     .characters h2 {
         font-size: 1.7rem;
+        font-size: 1.55rem;
+        margin-bottom: 14px;
     }
 
 
     /* CARD */
+    /* ---------- CARD ---------- */
 
     .character {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        /*
+         * Un poquito más compacta,
+         * pero todavía conserva las 3 zonas.
+         */
+        grid-template-columns: 0.75fr 1.5fr 0.75fr;
+
+        gap: 5px;
+        padding: 7px;
+
+        border-radius: 13px;
     }
 
+
+    /* ---------- PHOTOS ---------- */
 
     .photo-left,
     .photo-right {
         grid-column: 1;
         grid-row: auto;
-
-        min-height: 250px;
+        padding: 2px;
+        border-radius: 8px;
     }
 
+        min-height: 250px;
+    .photo-left img,
+    .photo-right img {
+        border-radius: 5px;
+    }
+
+
+    /* ---------- NAME ---------- */
 
     .name-oval {
         grid-column: 1;
         grid-row: auto;
+        padding: 4px;
+        border-radius: 22px;
     }
 
     .name-oval h3 {
         font-size: 22px;
+        font-size: clamp(14px, 4vw, 19px);
     }
 
 
     .info-box {
         grid-column: 1;
         grid-row: auto;
+    /* ---------- INFO ---------- */
+
+    .info-box,
+    .text-box {
+        border-radius: 6px;
+        padding: 5px;
+    }
+
+    .info-box p {
+        font-size: 0.52rem;
+        margin: 2px 0;
+        padding-bottom: 2px;
     }
 
 
     .text-box {
         grid-column: 1;
         grid-row: auto;
+    /* ---------- TEXT ---------- */
+
+    .text-title {
+        font-size: 0.63rem;
+        margin-bottom: 2px;
     }
 
+    .text-box p {
+        font-size: 0.51rem;
+        line-height: 1.2;
+    }
+
+
+    /* ---------- MINI ---------- */
 
     .mini-box {
         grid-column: 1;
         grid-row: auto;
+        padding: 3px;
+        border-radius: 6px;
+        gap: 1px;
     }
 
+    .mini-icons {
+        font-size: 0.55rem;
+    }
 
     .barcode {
         font-size: 40px;
+        font-size: 24px;
     }
 
 }
