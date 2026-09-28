@@ -342,7 +342,7 @@ main {
 
 .about-image {
     position: absolute;
-    top: 35px;       /* baja la imagen */
+    top: 40px;       /* baja la imagen */
     right: 0;       /* la pega al lado derecho */
     width: 72%;
     height: 300px;
