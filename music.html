@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/music.css">
+
+    <title>My Music</title>
+</head>
+
+<body>
+
+    <!-- ---------- HEADER ---------- -->
+
+    <header class="music-header">
+
+        <div class="header-content">
+            <p class="eyebrow">♡ my personal collection ♡</p>
+
+            <h1>Music</h1>
+
+            <p class="header-subtitle">
+                songs that live rent free in my head
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- ---------- MAIN NAV ---------- -->
+
+    <nav class="main-nav">
+
+        <a href="index.html">HOME</a>
+        <a href="music.html" class="active">MUSIC</a>
+        <a href="characters.html">CHARACTERS</a>
+        <a href="media.html">MEDIA</a>
+        <a href="diary.html">DIARY</a>
+        <a href="extras.html">EXTRAS</a>
+
+    </nav>
+
+
+    <!-- ---------- MUSIC ---------- -->
+
+    <main class="music-page">
+
+        <section class="music-intro">
+
+            <h2>My Music</h2>
+
+            <p>
+                A little collection of songs, albums and artists
+                I keep coming back to.
+            </p>
+
+        </section>
+
+
+        <!-- ---------- PLAYER ---------- -->
+
+        <section class="music-player">
+
+            <!-- COVER -->
+
+            <div class="player-cover-area">
+
+                <button class="cover-button prev-cover" id="prevCover">
+                    ‹
+                </button>
+
+                <div class="main-cover">
+                    <img
+                        id="coverImage"
+                        src="music/covers/album1.jpg"
+                        alt="Album cover"
+                    >
+                </div>
+
+                <button class="cover-button next-cover" id="nextCover">
+                    ›
+                </button>
+
+            </div>
+
+
+            <!-- SONG INFO -->
+
+            <div class="player-info">
+
+                <p class="now-playing">
+                    NOW PLAYING
+                </p>
+
+                <h3 id="songTitle">
+                    Song Title
+                </h3>
+
+                <p id="songArtist">
+                    Artist
+                </p>
+
+                <p class="album-name" id="albumName">
+                    Album Name
+                </p>
+
+
+                <!-- AUDIO -->
+
+                <audio id="audioPlayer"></audio>
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress-area">
+
+                    <span id="currentTime">0:00</span>
+
+                    <input
+                        type="range"
+                        id="progressBar"
+                        value="0"
+                        min="0"
+                        max="100"
+                    >
+
+                    <span id="duration">0:00</span>
+
+                </div>
+
+
+                <!-- CONTROLS -->
+
+                <div class="player-controls">
+
+                    <button id="prevSong" title="Previous">
+                        ◀◀
+                    </button>
+
+                    <button
+                        id="playButton"
+                        class="play-button"
+                        title="Play"
+                    >
+                        ▶
+                    </button>
+
+                    <button id="nextSong" title="Next">
+                        ▶▶
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ---------- CAROUSEL ---------- -->
+
+        <section class="album-section">
+
+            <div class="section-title">
+                <h2>My Albums</h2>
+                <span>♡</span>
+            </div>
+
+
+            <div class="album-carousel">
+
+                <button
+                    class="carousel-arrow"
+                    id="carouselLeft"
+                >
+                    ‹
+                </button>
+
+
+                <div class="album-window">
+
+                    <div
+                        class="album-track"
+                        id="albumTrack"
+                    >
+
+                        <!-- JS WILL INSERT THE ALBUMS HERE -->
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="carousel-arrow"
+                    id="carouselRight"
+                >
+                    ›
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ---------- PLAYLIST ---------- -->
+
+        <section class="playlist-section">
+
+            <div class="section-title">
+                <h2>Playlist</h2>
+                <span>♫</span>
+            </div>
+
+
+            <div
+                class="playlist"
+                id="playlist"
+            >
+
+                <!-- JS WILL INSERT THE SONGS HERE -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ---------- FOOTER ---------- -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>My Archive</h3>
+
+            <p>
+                made with ♡ by mil8s
+            </p>
+
+            <p class="copyright">
+                © 2026 My Archive
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ---------- JAVASCRIPT ---------- -->
+
+    <script src="music.js"></script>
+
+</body>
+
+</html>

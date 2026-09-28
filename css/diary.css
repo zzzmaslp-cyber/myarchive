@@ -1,0 +1,1239 @@
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+
+    --pink-strong: #FF6092;
+    --pink: #FFB3CB;
+    --pink-light: #FFE3EC;
+
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #B7B7B7;
+}
+
+
+/* =========================================================
+   FONTS
+========================================================= */
+
+@font-face {
+    font-family: "Pretty On The Inside";
+    src: url("../fonts/poti.ttf");
+}
+
+@font-face {
+    font-family: "Hillos";
+    src: url("../fonts/Hillos.otf");
+}
+
+@font-face {
+    font-family: "Cavalhatriz";
+    src: url("../fonts/Cavalhatriz.ttf");
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/Coolvetica.otf");
+}
+
+@font-face {
+    font-family: "Essays 1743";
+    src: url("../fonts/Essays1743.ttf");
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+
+    font-family: "Hillos", Arial, sans-serif;
+
+    line-height: 1.6;
+
+    position: relative;
+}
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image: url("../img/cutestars.jpg");
+
+    background-size: 500px;
+
+    filter: blur(3px);
+
+    z-index: -1;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.diary-header {
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding-bottom: 35px;
+}
+
+.diary-header::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image: url("../img/lockers.jpg");
+
+    background-size: 600px;
+
+    background-position: center;
+
+    z-index: 0;
+}
+
+
+.diary-banner {
+
+    height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    z-index: 1;
+
+    padding: 20px;
+
+    border-radius: 1% 1% 10% 10%;
+
+    background-image:
+        url("../img/gg.jpg"),
+        linear-gradient(to right, #fcf7eb, #cbc1c3);
+
+    background-repeat: no-repeat;
+
+    background-size: 1000px, cover;
+
+    background-position: center 25%, center;
+
+    border-bottom: 6px solid var(--pink);
+}
+
+
+.diary-banner .eyebrow {
+
+    margin: 0 0 10px;
+
+    font-family: "Coolvetica", sans-serif;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    text-shadow: 2px 2px 9px #F0C5D4;
+}
+
+
+.diary-banner h1 {
+
+    margin: 0 0 10px;
+
+    font-family: "Pretty On The Inside", sans-serif;
+
+    font-size: 90px;
+
+    font-weight: normal;
+
+    line-height: 1;
+
+    letter-spacing: 5px;
+
+    color: var(--pink);
+
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000;
+}
+
+
+.diary-banner > p:last-child {
+
+    margin: 0;
+
+    font-family: "Hillos", sans-serif;
+
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   MAIN NAV
+========================================================= */
+
+.main-nav {
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    margin: -20px auto 45px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.main-nav a {
+
+    padding: 6px 16px;
+
+    background: #000;
+
+    color: #fff;
+
+    font-family: "Coolvetica", sans-serif;
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+    border-radius: 999px;
+
+    transition: 0.2s ease;
+}
+
+
+.main-nav a:hover {
+
+    background: var(--pink);
+
+    color: #000;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+
+    width: 92%;
+
+    max-width: 1050px;
+
+    margin: 0 auto 100px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.diary-intro {
+
+    width: 80%;
+
+    margin: 0 auto 80px;
+
+    padding: 35px 55px;
+
+    background: var(--pink-light);
+
+    border: 2px solid #000;
+
+    border-radius: 20px 60px 20px 60px;
+
+    text-align: center;
+
+    box-shadow:
+        7px 7px 0 var(--pink),
+        11px 11px 0 rgba(0, 0, 0, 0.12);
+
+    position: relative;
+}
+
+
+.intro-decoration {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 25px;
+
+    color: var(--pink-strong);
+
+    font-size: 25px;
+}
+
+
+.diary-intro h2 {
+
+    margin: 0 0 12px;
+
+    font-family: "Cavalhatriz", serif;
+
+    font-size: 48px;
+
+    border-bottom: 2px solid #000;
+
+    padding-bottom: 7px;
+}
+
+
+.diary-intro p {
+
+    max-width: 700px;
+
+    margin: 0 auto 20px;
+
+    font-size: 1rem;
+}
+
+
+.intro-line {
+
+    color: var(--pink-strong);
+
+    letter-spacing: 3px;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   DIARY ENTRIES
+========================================================= */
+
+.diary-entries {
+
+    width: 90%;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   ENTRY
+========================================================= */
+
+.diary-entry {
+
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    gap: 40px;
+
+    align-items: center;
+
+    margin-bottom: 75px;
+}
+
+
+/* ---------- REVERSE ---------- */
+
+.diary-entry.reverse {
+
+    grid-template-columns: 1fr 150px;
+}
+
+.diary-entry.reverse .entry-date {
+
+    grid-column: 2;
+
+    grid-row: 1;
+}
+
+.diary-entry.reverse .entry-paper {
+
+    grid-column: 1;
+
+    grid-row: 1;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.entry-date {
+
+    width: 130px;
+
+    height: 130px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #fff;
+
+    border: 2px solid #000;
+
+    border-radius: 50%;
+
+    box-shadow:
+        6px 6px 0 var(--pink);
+
+    transform: rotate(-3deg);
+}
+
+
+.entry-date .day {
+
+    font-family: "Pretty On The Inside", sans-serif;
+
+    font-size: 45px;
+
+    line-height: 0.9;
+}
+
+
+.entry-date .month {
+
+    font-family: "Coolvetica", sans-serif;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+}
+
+
+.entry-date .year {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   ENTRY PAPER
+========================================================= */
+
+.entry-paper {
+
+    background: #fff;
+
+    border: 2px solid #000;
+
+    padding: 35px 40px;
+
+    border-radius: 12px 45px 12px 45px;
+
+    box-shadow:
+        -8px 8px 0 var(--pink),
+        -12px 12px 0 rgba(0, 0, 0, 0.10);
+
+    position: relative;
+
+    transform: rotate(0.5deg);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.entry-paper:hover {
+
+    transform: rotate(0deg) translateY(-4px);
+
+    box-shadow:
+        -10px 10px 0 var(--pink),
+        -14px 14px 0 rgba(0, 0, 0, 0.13);
+}
+
+
+/* ---------- ENTRY NUMBER ---------- */
+
+.entry-number {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--pink-strong);
+
+    font-family: "Coolvetica", sans-serif;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* ---------- TITLE ---------- */
+
+.entry-paper h2 {
+
+    margin: 0 0 15px;
+
+    padding-bottom: 8px;
+
+    font-family: "Cavalhatriz", serif;
+
+    font-size: 2.1rem;
+
+    line-height: 1.1;
+
+    border-bottom: 2px solid var(--pink);
+}
+
+
+/* ---------- TEXT ---------- */
+
+.entry-paper p {
+
+    margin: 0 0 15px;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.entry-footer {
+
+    margin-top: 20px;
+
+    padding-top: 10px;
+
+    border-top: 1px dashed #000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-family: "Coolvetica", sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   END
+========================================================= */
+
+.diary-end {
+
+    width: 75%;
+
+    margin: 110px auto 20px;
+
+    text-align: center;
+}
+
+
+.diary-end > div {
+
+    color: var(--pink-strong);
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.diary-end h2 {
+
+    margin: 0;
+
+    font-family: "Cavalhatriz", serif;
+
+    font-size: 2rem;
+}
+
+
+.diary-end p {
+
+    margin: 5px 0;
+
+    font-style: italic;
+
+    color: #861e3f;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    background: #000;
+
+    color: #fff;
+
+    text-align: center;
+
+    padding: 30px 20px 25px;
+
+    border-top: 5px solid var(--pink);
+
+    font-family: "Coolvetica", sans-serif;
+
+    letter-spacing: 1px;
+}
+
+
+.footer-title {
+
+    margin: 8px 0;
+
+    font-family: "Pretty On The Inside", sans-serif;
+
+    font-size: 2rem;
+
+    color: var(--pink);
+
+    letter-spacing: 3px;
+}
+
+
+footer p {
+    margin: 5px 0;
+}
+
+
+.footer-decoration {
+
+    color: var(--pink);
+
+    font-size: 0.9rem;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   SCROLL NAV
+========================================================= */
+
+.scroll-nav {
+
+    position: fixed;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translate(-50%, -150%);
+
+    width: 92%;
+
+    max-width: 1050px;
+
+    height: 62px;
+
+    background: var(--pink);
+
+    border: 2px solid #000;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 25px;
+
+    z-index: 1000;
+
+    box-shadow:
+        0 5px 0 #fff,
+        0 8px 18px rgba(255, 96, 146, 0.30);
+
+    transition: transform 0.4s ease;
+}
+
+
+.scroll-nav.show {
+
+    transform: translate(-50%, 0);
+}
+
+
+.scroll-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: #000;
+
+    font-family: "Cavalhatriz", sans-serif;
+
+    font-size: 40px;
+}
+
+
+.scroll-avatar {
+
+    width: 75px;
+
+    height: 75px;
+
+    border-radius: 50%;
+
+    background-image: url("../img/ryro.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border: 4px solid #fff;
+
+    outline: 2px solid #000;
+
+    position: relative;
+
+    top: 22px;
+
+    flex-shrink: 0;
+}
+
+
+.scroll-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.scroll-links a {
+
+    position: relative;
+
+    color: #000;
+
+    font-family: "Hillos", sans-serif;
+
+    font-size: 0.95rem;
+
+    text-decoration: none;
+
+    padding: 6px 3px;
+
+    transition: 0.2s ease;
+}
+
+
+.scroll-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 3px;
+
+    background: #fff;
+
+    border-radius: 999px;
+
+    transition: width 0.25s ease;
+}
+
+
+.scroll-links a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 1000px) {
+
+    .diary-banner {
+        height: 260px;
+    }
+
+    .diary-banner h1 {
+        font-size: 70px;
+    }
+
+    .diary-intro {
+        width: 90%;
+    }
+
+    .diary-entry {
+        gap: 25px;
+        grid-template-columns: 120px 1fr;
+    }
+
+    .diary-entry.reverse {
+        grid-template-columns: 1fr 120px;
+    }
+
+    .entry-date {
+        width: 105px;
+        height: 105px;
+    }
+
+    .entry-date .day {
+        font-size: 38px;
+    }
+
+    .entry-paper {
+        padding: 30px;
+    }
+
+    .scroll-nav {
+        width: 94%;
+        height: 58px;
+        padding: 0 18px;
+    }
+
+    .scroll-profile {
+        font-size: 30px;
+        gap: 8px;
+    }
+
+    .scroll-avatar {
+        width: 60px;
+        height: 60px;
+        top: 18px;
+    }
+
+    .scroll-links {
+        gap: 15px;
+    }
+
+    .scroll-links a {
+        font-size: 0.85rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* ---------- HEADER ---------- */
+
+    .diary-header {
+        padding-bottom: 25px;
+    }
+
+    .diary-banner {
+        height: 205px;
+        padding: 15px;
+    }
+
+    .diary-banner .eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+        margin-bottom: 7px;
+    }
+
+    .diary-banner h1 {
+        font-size: clamp(48px, 15vw, 65px);
+        letter-spacing: 2px;
+    }
+
+    .diary-banner > p:last-child {
+        font-size: 15px;
+    }
+
+
+    /* ---------- NAV ---------- */
+
+    .main-nav {
+        width: 92%;
+        margin: 5px auto 35px;
+        gap: 6px;
+    }
+
+    .main-nav a {
+        padding: 6px 12px;
+        font-size: 0.76rem;
+    }
+
+
+    /* ---------- MAIN ---------- */
+
+    main {
+        width: 92%;
+        margin-bottom: 50px;
+    }
+
+
+    /* ---------- INTRO ---------- */
+
+    .diary-intro {
+        width: 100%;
+
+        margin-bottom: 55px;
+
+        padding: 28px 20px;
+
+        border-radius: 18px 45px 18px 45px;
+    }
+
+    .intro-decoration {
+        top: 12px;
+        right: 17px;
+        font-size: 20px;
+    }
+
+    .diary-intro h2 {
+        font-size: 1.9rem;
+    }
+
+    .diary-intro p {
+        font-size: 0.9rem;
+    }
+
+
+    /* =====================================================
+       DIARY ENTRIES
+    ===================================================== */
+
+    .diary-entries {
+        width: 100%;
+    }
+
+
+    .diary-entry,
+    .diary-entry.reverse {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 18px;
+
+        margin-bottom: 55px;
+    }
+
+
+    /* ---------- DATE ---------- */
+
+    .entry-date {
+
+        order: 1;
+
+        width: 85px;
+        height: 85px;
+
+        margin: 0 auto;
+
+        box-shadow: 4px 4px 0 var(--pink);
+
+        transform: rotate(-2deg);
+    }
+
+    .entry-date .day {
+        font-size: 30px;
+    }
+
+    .entry-date .month {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .entry-date .year {
+        font-size: 9px;
+    }
+
+
+    /* ---------- PAPER ---------- */
+
+    .entry-paper {
+
+        order: 2;
+
+        width: 100%;
+
+        padding: 25px 20px;
+
+        border-radius: 15px 35px 15px 35px;
+    }
+
+    .entry-paper h2 {
+        font-size: 1.55rem;
+    }
+
+    .entry-paper p {
+        font-size: 0.9rem;
+        line-height: 1.55;
+    }
+
+    .entry-number {
+        font-size: 0.62rem;
+        letter-spacing: 2px;
+    }
+
+
+    /* ---------- END ---------- */
+
+    .diary-end {
+        width: 95%;
+        margin: 70px auto 20px;
+    }
+
+    .diary-end h2 {
+        font-size: 1.45rem;
+    }
+
+    .diary-end p {
+        font-size: 0.9rem;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+        padding: 25px 15px 20px;
+    }
+
+    .footer-title {
+        font-size: 1.7rem;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+
+
+    /* ---------- SCROLL NAV ---------- */
+
+    .scroll-nav {
+
+        width: calc(100% - 20px);
+
+        height: 54px;
+
+        padding: 0 12px;
+
+        border-radius: 18px;
+    }
+
+    .scroll-profile {
+        font-size: 22px;
+        gap: 7px;
+    }
+
+    .scroll-avatar {
+        width: 47px;
+        height: 47px;
+        top: 15px;
+        border-width: 3px;
+    }
+
+    .scroll-links {
+        gap: 10px;
+    }
+
+    .scroll-links a {
+        font-size: 0.72rem;
+        padding: 5px 2px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 430px) {
+
+    .diary-banner {
+        height: 190px;
+    }
+
+    .diary-banner h1 {
+        font-size: 50px;
+    }
+
+    .diary-banner .eyebrow {
+        font-size: 0.62rem;
+    }
+
+    .diary-banner > p:last-child {
+        font-size: 14px;
+    }
+
+
+    .main-nav {
+        gap: 5px;
+    }
+
+    .main-nav a {
+        padding: 5px 9px;
+        font-size: 0.7rem;
+    }
+
+
+    .diary-intro {
+        padding: 24px 16px;
+    }
+
+    .diary-intro h2 {
+        font-size: 1.6rem;
+    }
+
+    .diary-intro p {
+        font-size: 0.85rem;
+    }
+
+
+    .entry-date {
+        width: 75px;
+        height: 75px;
+    }
+
+    .entry-date .day {
+        font-size: 27px;
+    }
+
+
+    .entry-paper {
+        padding: 23px 18px;
+    }
+
+    .entry-paper h2 {
+        font-size: 1.4rem;
+    }
+
+    .entry-paper p {
+        font-size: 0.86rem;
+    }
+
+
+    .scroll-nav {
+        width: calc(100% - 14px);
+        height: 50px;
+        padding: 0 9px;
+        border-radius: 16px;
+    }
+
+    .scroll-profile {
+        font-size: 19px;
+        gap: 5px;
+    }
+
+    .scroll-avatar {
+        width: 42px;
+        height: 42px;
+        top: 13px;
+        border-width: 2px;
+    }
+
+    .scroll-links {
+        gap: 7px;
+    }
+
+    .scroll-links a {
+        font-size: 0.66rem;
+        padding: 4px 1px;
+    }
+
+
+    footer {
+        padding: 22px 12px 18px;
+    }
+
+    .footer-title {
+        font-size: 1.5rem;
+    }
+
+}

@@ -1,0 +1,898 @@
+/* ---------- FONTS ---------- */
+
+@font-face {
+    font-family: "Pretty On The Inside";
+    src: url("../fonts/poti.ttf");
+}
+
+@font-face {
+    font-family: "Hillos";
+    src: url("../fonts/Hillos.otf");
+}
+
+@font-face {
+    font-family: "Cavalhatriz";
+    src: url("../fonts/Cavalhatriz.ttf");
+}
+
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/Coolvetica.otf");
+}
+
+@font-face {
+    font-family: "Essays 1743";
+    src: url("../fonts/Essays1743.ttf");
+}
+
+
+/* ---------- COLORS ---------- */
+
+:root {
+    --pink-strong: #FF6092;
+    --pink: #FFB3CB;
+    --pink-light: #FFE3EC;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #777777;
+}
+
+
+/* ---------- GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: var(--white);
+    color: var(--black);
+    font-family: "Coolvetica", sans-serif;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.78),
+            rgba(255, 255, 255, 0.78)
+        ),
+        url("../img/cutestars.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* ---------- HEADER ---------- */
+
+.music-header {
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 70px 30px;
+
+    background:
+        linear-gradient(
+            rgba(255, 179, 203, 0.75),
+            rgba(255, 227, 236, 0.82)
+        ),
+        url("../img/lockers.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    border-bottom: 4px solid var(--black);
+}
+
+
+.header-content {
+    max-width: 900px;
+}
+
+
+.eyebrow {
+    margin: 0 0 10px;
+
+    font-family: "Pretty On The Inside", cursive;
+    font-size: 24px;
+}
+
+
+.music-header h1 {
+    margin: 0;
+
+    font-family: "Cavalhatriz", serif;
+    font-size: 90px;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        4px 4px 0 var(--white),
+        7px 7px 0 var(--black);
+}
+
+
+.header-subtitle {
+    margin-top: 20px;
+
+    font-family: "Essays 1743", serif;
+    font-size: 19px;
+}
+
+
+/* ---------- NAV ---------- */
+
+.main-nav {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 20px;
+
+    background-color: var(--black);
+
+    border-bottom: 4px solid var(--pink-strong);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.main-nav a {
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-family: "Coolvetica", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    padding: 10px 17px;
+
+    transition: 0.2s;
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: var(--pink);
+    color: var(--black);
+}
+
+
+/* ---------- MAIN ---------- */
+
+.music-page {
+    width: 92%;
+    max-width: 1200px;
+
+    margin: 55px auto 150px;
+}
+
+
+/* ---------- INTRO ---------- */
+
+.music-intro {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.music-intro h2 {
+    display: inline-block;
+
+    margin: 0 0 15px;
+
+    padding: 8px 50px;
+
+    background-color: var(--pink);
+
+    border: 3px solid var(--black);
+    border-radius: 50px;
+
+    box-shadow: 6px 6px 0 var(--black);
+
+    font-family: "Cavalhatriz", serif;
+    font-size: 48px;
+}
+
+
+.music-intro p {
+    margin: 20px auto 0;
+
+    max-width: 650px;
+
+    font-family: "Essays 1743", serif;
+    font-size: 18px;
+}
+
+
+/* ---------- PLAYER ---------- */
+
+.music-player {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 45px;
+
+    background-color: var(--white);
+
+    border: 4px solid var(--black);
+
+    box-shadow: 10px 10px 0 var(--pink-strong);
+}
+
+
+/* ---------- PLAYER COVER ---------- */
+
+.player-cover-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+.main-cover {
+    width: 390px;
+    height: 390px;
+
+    background-color: var(--pink-light);
+
+    border: 5px solid var(--black);
+
+    box-shadow: 9px 9px 0 var(--pink);
+
+    overflow: hidden;
+}
+
+
+.main-cover img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.cover-button {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    border: 3px solid var(--black);
+
+    background-color: var(--pink);
+
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.cover-button:hover {
+    background-color: var(--pink-strong);
+
+    transform: scale(1.08);
+}
+
+
+/* ---------- PLAYER INFO ---------- */
+
+.player-info {
+    text-align: center;
+}
+
+
+.now-playing {
+    margin: 0 0 12px;
+
+    font-family: "Coolvetica", sans-serif;
+    font-size: 13px;
+
+    letter-spacing: 3px;
+    color: var(--pink-strong);
+}
+
+
+.player-info h3 {
+    margin: 0;
+
+    font-family: "Cavalhatriz", serif;
+    font-size: 42px;
+
+    line-height: 1.1;
+}
+
+
+#songArtist {
+    margin: 12px 0 3px;
+
+    font-family: "Coolvetica", sans-serif;
+    font-size: 22px;
+}
+
+
+.album-name {
+    margin: 0 0 35px;
+
+    color: var(--gray);
+
+    font-family: "Essays 1743", serif;
+    font-size: 17px;
+}
+
+
+/* ---------- PROGRESS ---------- */
+
+.progress-area {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+
+.progress-area span {
+    min-width: 35px;
+
+    font-size: 12px;
+}
+
+
+#progressBar {
+    width: 100%;
+
+    appearance: none;
+
+    height: 7px;
+
+    background-color: var(--pink-light);
+
+    border: 1px solid var(--black);
+
+    cursor: pointer;
+}
+
+
+#progressBar::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background-color: var(--pink-strong);
+
+    border: 2px solid var(--black);
+
+    cursor: pointer;
+}
+
+
+#progressBar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+
+    border-radius: 50%;
+
+    background-color: var(--pink-strong);
+
+    border: 2px solid var(--black);
+
+    cursor: pointer;
+}
+
+
+/* ---------- CONTROLS ---------- */
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+}
+
+
+.player-controls button {
+    width: 48px;
+    height: 48px;
+
+    border: 3px solid var(--black);
+
+    background-color: var(--pink-light);
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.2s;
+}
+
+
+.player-controls button:hover {
+    background-color: var(--pink);
+}
+
+
+.player-controls .play-button {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    background-color: var(--pink-strong);
+
+    font-size: 22px;
+
+    box-shadow: 4px 4px 0 var(--black);
+}
+
+
+.player-controls .play-button:hover {
+    transform: scale(1.05);
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.album-section,
+.playlist-section {
+    margin-top: 90px;
+}
+
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 3px solid var(--black);
+}
+
+
+.section-title h2 {
+    margin: 0;
+
+    font-family: "Cavalhatriz", serif;
+    font-size: 42px;
+}
+
+
+.section-title span {
+    font-size: 30px;
+    color: var(--pink-strong);
+}
+
+
+/* ---------- ALBUM CAROUSEL ---------- */
+
+.album-carousel {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.album-window {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+.album-track {
+    display: flex;
+
+    gap: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+
+.album-card {
+    flex: 0 0 190px;
+
+    padding: 10px;
+
+    background-color: var(--white);
+
+    border: 3px solid var(--black);
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.album-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 5px 5px 0 var(--pink);
+}
+
+
+.album-card.active {
+    background-color: var(--pink-light);
+
+    box-shadow: 5px 5px 0 var(--pink-strong);
+}
+
+
+.album-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    border: 2px solid var(--black);
+}
+
+
+.album-card p {
+    margin: 10px 2px 2px;
+
+    font-family: "Coolvetica", sans-serif;
+    font-size: 15px;
+
+    text-align: center;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.carousel-arrow {
+    width: 45px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    border: 3px solid var(--black);
+
+    background-color: var(--pink);
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.carousel-arrow:hover {
+    background-color: var(--pink-strong);
+}
+
+
+/* ---------- PLAYLIST ---------- */
+
+.playlist {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.playlist-item {
+    display: grid;
+
+    grid-template-columns: 65px 1fr auto;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 10px 15px;
+
+    background-color: var(--white);
+
+    border: 3px solid var(--black);
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.playlist-item:hover {
+    background-color: var(--pink-light);
+}
+
+
+.playlist-item.active {
+    background-color: var(--pink);
+}
+
+
+.playlist-item img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: cover;
+
+    border: 2px solid var(--black);
+}
+
+
+.playlist-info strong {
+    display: block;
+
+    font-size: 18px;
+}
+
+
+.playlist-info span {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+.playlist-number {
+    font-family: "Cavalhatriz", serif;
+    font-size: 25px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    padding: 45px 20px;
+
+    background-color: var(--black);
+
+    color: var(--white);
+
+    border-top: 5px solid var(--pink-strong);
+
+    text-align: center;
+}
+
+
+.footer-content h3 {
+    margin: 0 0 8px;
+
+    color: var(--pink);
+
+    font-family: "Cavalhatriz", serif;
+    font-size: 32px;
+}
+
+
+.footer-content p {
+    margin: 5px 0;
+
+    font-family: "Essays 1743", serif;
+}
+
+
+.footer-content .copyright {
+    margin-top: 20px;
+
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+
+    .music-player {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        padding: 30px;
+    }
+
+    .main-cover {
+        width: min(70vw, 380px);
+        height: min(70vw, 380px);
+    }
+
+    .player-info {
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .album-card {
+        flex-basis: 160px;
+    }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 600px) {
+
+    .music-header {
+        min-height: 250px;
+
+        padding: 50px 20px;
+    }
+
+    .music-header h1 {
+        font-size: 55px;
+
+        letter-spacing: 2px;
+
+        text-shadow:
+            3px 3px 0 var(--white),
+            5px 5px 0 var(--black);
+    }
+
+    .eyebrow {
+        font-size: 18px;
+    }
+
+    .header-subtitle {
+        font-size: 15px;
+    }
+
+
+    .main-nav {
+        gap: 5px;
+
+        padding: 10px;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+    }
+
+    .main-nav a {
+        flex-shrink: 0;
+
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .music-page {
+        width: 90%;
+
+        margin-top: 35px;
+    }
+
+
+    .music-intro h2 {
+        width: 100%;
+
+        padding: 8px 20px;
+
+        font-size: 32px;
+
+        box-shadow: 4px 4px 0 var(--black);
+    }
+
+
+    .music-intro p {
+        font-size: 16px;
+    }
+
+
+    .music-player {
+        padding: 20px;
+
+        border-width: 3px;
+
+        box-shadow: 6px 6px 0 var(--pink-strong);
+    }
+
+
+    .player-cover-area {
+        gap: 8px;
+    }
+
+
+    .main-cover {
+        width: 65vw;
+        height: 65vw;
+
+        border-width: 4px;
+
+        box-shadow: 6px 6px 0 var(--pink);
+    }
+
+
+    .cover-button {
+        width: 35px;
+        height: 40px;
+
+        font-size: 25px;
+    }
+
+
+    .player-info h3 {
+        font-size: 32px;
+    }
+
+
+    #songArtist {
+        font-size: 19px;
+    }
+
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+
+    .album-card {
+        flex-basis: 135px;
+    }
+
+
+    .carousel-arrow {
+        width: 35px;
+        height: 45px;
+
+        font-size: 25px;
+    }
+
+
+    .playlist-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 12px;
+    }
+
+
+    .playlist-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .playlist-number {
+        display: none;
+    }
+
+}
