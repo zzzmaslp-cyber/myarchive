@@ -9,7 +9,17 @@
 
     <title>My Music</title>
 </head>
+<script>
+window.addEventListener("scroll", () => {
+    const scrollNav = document.querySelector(".scroll-nav");
 
+    if (window.scrollY > 150) {
+        scrollNav.classList.add("show");
+    } else {
+        scrollNav.classList.remove("show");
+    }
+});
+</script>
 <body>
 <nav class="scroll-nav">
 
