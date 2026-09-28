@@ -551,6 +551,28 @@ img {
 
 @media (max-width: 560px) {
 
+
+    /* ---------- CHARACTERS TITLE ---------- */
+
+.characters {
+    width: 92%;
+    margin: 35px auto 100px;
+}
+
+.characters h2 {
+    width: 100%;
+
+    font-size: 1.9rem;
+
+    padding: 8px 20px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 35px;
+
+    box-shadow: 4px 4px 0 #000000;
+}
+
     /* ---------- HEADER ---------- */
 
     .banner h1 {
