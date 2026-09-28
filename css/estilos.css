@@ -191,7 +191,7 @@ text-shadow:
 .profile-picture {
     width: 200px;
     height: 200px;
-    border-radius: 40%;
+    border-radius: 60%;
     background-image: url("../img/ryro.jpg");
     background-size: cover;
     background-position: center;
