@@ -431,154 +431,232 @@ img {
     font-family: "barras";
     font-size: 50px;
 }
-
-
 /* =====================================================
    RESPONSIVE
    Se conserva el layout de escritorio tal cual;
    solo se ajustan tamaños/posiciones en breakpoints.
    ===================================================== */
- 
+
+
 /* ---------- TABLET (<= 1024px) ---------- */
+
 @media (max-width: 1024px) {
- 
+
     .banner {
         padding-left: 30%;
     }
- 
+
     .banner h1 {
         font-size: 60px;
     }
- 
+
     .banner p {
         font-size: 17px;
     }
- 
+
     .character {
         width: 100%;
         max-width: 700px;
     }
+
 }
- 
-/* ---------- TABLET CHICA / MÓVIL GRANDE (<= 768px) ---------- */
+
+
+/* =====================================================
+   TABLET CHICA / MÓVIL GRANDE (<= 768px)
+===================================================== */
+
 @media (max-width: 768px) {
- 
+
     .banner {
         height: auto;
         min-height: 220px;
+
         padding: 90px 24px 24px;
+
         align-items: center;
         text-align: center;
     }
- 
+
     .banner h1 {
         font-size: 46px;
         letter-spacing: 2px;
     }
- 
+
     .banner p {
         font-size: 15px;
         text-align: center;
     }
- 
-    /* la foto de perfil y el menú dejan de flotar encima
-       del banner y pasan a fluir en el documento */
+
+
+    /* ---------- PROFILE ---------- */
+
     .profile-area2 {
         height: auto;
         padding-top: 100px;
     }
- 
+
     .profile-side {
         position: static;
+
         justify-content: center;
+
         margin: 0 auto 15px;
     }
- 
+
     .profile-picture {
         width: 140px;
         height: 140px;
     }
- 
+
+
+    /* ---------- SIDE NAV ---------- */
+
     .side-nav {
         position: static;
+
         justify-content: center;
+
         flex-wrap: wrap;
+
         gap: 15px;
+
         padding: 10px 0 0;
     }
- 
+
     .side-nav a {
         padding: 12px 20px;
+
         font-size: 15px;
     }
- 
+
+
+    /* ---------- CHARACTERS ---------- */
+
     .characters h2 {
         font-size: 1.9rem;
     }
- 
+
     .character {
         width: 100%;
         max-width: 480px;
     }
+
 }
- 
-/* ---------- MÓVIL (<= 560px) ---------- */
+
+
+/* =====================================================
+   MÓVIL (<= 560px)
+===================================================== */
+
 @media (max-width: 560px) {
- 
+
+    /* ---------- HEADER ---------- */
+
     .banner h1 {
         font-size: 34px;
     }
- 
+
     .banner p {
         font-size: 13px;
     }
- 
+
+
+    /* ---------- PROFILE ---------- */
+
     .profile-picture {
         width: 110px;
         height: 110px;
+
         outline-width: 2px;
         border-width: 5px;
     }
- 
+
+
+    /* ---------- SIDE NAV ---------- */
+
     .side-nav a {
         padding: 10px 16px;
+
         font-size: 13px;
     }
- 
-    /* la card de personaje pasa de 3 columnas a 1,
-       apilando cada bloque en el mismo orden en que
-       aparecen en el HTML, sin perder estilos */
+
+
+    /* =================================================
+       CHARACTER CARD
+       
+       En móvil:
+       
+       FOTO
+       INFO
+       
+       FOTO 2 OCULTA
+    ================================================= */
+
     .character {
+
         grid-template-columns: 1fr;
+
         grid-template-rows: auto;
+
         justify-items: stretch;
     }
- 
-    .photo-left,
-    .photo-right,
+
+
+    /* ---------- PRIMERA FOTO ---------- */
+
+    .photo-left {
+
+        grid-column: 1;
+        grid-row: auto;
+
+        width: 100%;
+
+        /*
+           Un poco más alta para que la imagen
+           no se vea tan aplastada.
+        */
+        height: 250px;
+    }
+
+
+    /* ---------- SEGUNDA FOTO OCULTA ---------- */
+
+    .photo-right {
+        display: none;
+    }
+
+
+    /* ---------- RESTO DE ELEMENTOS ---------- */
+
     .name-oval,
     .info-box,
     .text-box,
     .mini-box {
+
         grid-column: 1;
         grid-row: auto;
     }
- 
-    .photo-left,
-    .photo-right {
-        height: 220px;
-    }
- 
+
+
+    /* ---------- NAME ---------- */
+
     .name-oval h3 {
         font-size: 24px;
     }
- 
+
+
+    /* ---------- MINI BOX ---------- */
+
     .mini-box {
         align-self: stretch;
     }
- 
+
+
+    /* ---------- BARCODE ---------- */
+
     .barcode {
         font-size: 36px;
     }
+
 }
- 
