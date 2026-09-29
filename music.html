@@ -9,37 +9,9 @@
 
     <title>My Music</title>
 </head>
-<script>
-window.addEventListener("scroll", () => {
-    const scrollNav = document.querySelector(".scroll-nav");
 
-    if (window.scrollY > 150) {
-        scrollNav.classList.add("show");
-    } else {
-        scrollNav.classList.remove("show");
-    }
-});
-</script>
 <body>
-<nav class="scroll-nav">
 
-    <div class="scroll-profile">
-
-        <div class="scroll-avatar"></div>
-
-        <span>Mils</span>
-
-    </div>
-
-    <div class="scroll-links">
-
-        <a href="#music">Music</a>
-        <a href="#albums">Albums</a>
-        <a href="#playlist">Playlist</a>
-
-    </div>
-
-</nav>
     <!-- ---------- HEADER ---------- -->
 
     <header class="music-header">
@@ -102,7 +74,7 @@ window.addEventListener("scroll", () => {
                 <div class="main-cover">
                     <img
                         id="coverImage"
-                        src="music/covers/falloutboy.jfif"
+                        src="music/covers/album1.jpg"
                         alt="Album cover"
                     >
                 </div>
@@ -123,15 +95,15 @@ window.addEventListener("scroll", () => {
                 </p>
 
                 <h3 id="songTitle">
-                    Don't You Know Who I Think I Am?
+                    Song Title
                 </h3>
 
                 <p id="songArtist">
-                    Fall Out Boy
+                    Artist
                 </p>
 
                 <p class="album-name" id="albumName">
-                    Infinity on High
+                    Album Name
                 </p>
 
 
@@ -144,7 +116,7 @@ window.addEventListener("scroll", () => {
 
                 <div class="progress-area">
 
-                    <span id="currentTime">1:04</span>
+                    <span id="currentTime">0:00</span>
 
                     <input
                         type="range"
@@ -154,7 +126,7 @@ window.addEventListener("scroll", () => {
                         max="100"
                     >
 
-                    <span id="duration">2:52</span>
+                    <span id="duration">0:00</span>
 
                 </div>
 

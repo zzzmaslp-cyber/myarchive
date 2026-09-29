@@ -21,5 +21,13 @@ const tracks = [
         album: "Album name",
         audio: "music/audio/song3.mp3",
         cover: "music/covers/album3.jpg"
+    },
+
+    {
+        title: "Basket Case",
+        artist: "Green Day",
+        album: "Dookie",
+        audio: "music/audio/basket-case.mp3",
+        cover: "music/covers/dookie.jpg"
     }
 ];
