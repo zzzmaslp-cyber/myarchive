@@ -1,0 +1,276 @@
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 800px) {
+
+/* ---------- HEADER ---------- */
+
+.banner {
+    height: 175px;
+    padding: 15px 20px;
+}
+
+.banner h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.banner p {
+    font-size: 15px;
+}
+
+.banner p.eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+}
+
+    /* PROFILE AREA */
+
+    .profile-area {
+        width: 87%;
+        margin: -25px auto 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .profile-center {
+        width: 100%;
+    }
+
+    .profile-picture {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-bio {
+        width: 100%;
+        max-width: 450px;
+    }
+
+
+  /* ---------- SIDE NAV ---------- */
+
+.side-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+.side-nav a {
+    padding: 8px 15px;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+
+   /* ---------- MAIN NAV ---------- */
+
+.main-nav {
+    width: 94%;
+    margin: 0 auto 28px;
+    gap: 6px;
+    justify-content: center;
+}
+
+.main-nav a {
+    font-size: 0.7rem;
+    padding: 6px 10px;
+}
+
+
+    /* MAIN */
+
+    main {
+        width: 92%;
+    }
+
+
+    /* ABOUT */
+
+    .about-banner {
+        min-height: auto;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-image {
+    position: relative;
+    top: auto;
+    right: auto;
+
+    width: 96%;
+    height: 210px;
+
+    margin: 0 auto;
+
+    order: 1;
+}
+
+    .about-text {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+
+    width: 92%;
+    min-height: auto;
+
+    margin: -25px auto 0;
+    padding: 50px 22px 22px;
+
+    order: 2;
+}
+
+    .about-text h2 {
+        font-size: 1.7rem;
+    }
+
+
+    /* CONTENT ROWS */
+
+    .content-row,
+    .content-row.reverse {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .content-row.reverse .content-card {
+        order: 1;
+    }
+
+    .content-row.reverse .content-image {
+        order: 2;
+    }
+
+    .content-image {
+    width: 94%;
+    height: 225px;
+    min-height: 0;
+    margin: 0 auto;
+    transform: rotate(-1deg);
+}
+
+    .content-row.reverse .content-image {
+        transform: rotate(1deg);
+    }
+
+    .content-card {
+    width: 94%;
+    margin: 0 auto;
+    padding: 22px 20px;
+    min-height: auto;
+}
+
+    .content-card h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 15px;
+    }
+
+    .footer-title {
+        font-size: 1.6rem;
+    }
+
+
+    /* SCROLL NAV */
+
+    .scroll-nav {
+        width: 94%;
+        height: auto;
+        min-height: 55px;
+        padding: 8px 12px;
+        border-radius: 18px;
+    }
+
+    .scroll-profile {
+        font-size: 25px;
+        gap: 7px;
+    }
+
+    .scroll-avatar {
+        width: 50px;
+        height: 50px;
+        top: 0;
+    }
+
+    .scroll-links {
+        gap: 10px;
+    }
+
+    .scroll-links a {
+        font-size: 0.75rem;
+    }
+
+}
+
+/* ---------- SMALL PHONES ---------- */
+
+@media (max-width: 500px) {
+
+    .banner {
+        height: 170px;
+    }
+
+    .banner h1 {
+        font-size: 42px;
+        letter-spacing: 1px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .profile-picture {
+        width: 140px;
+        height: 140px;
+    }
+
+    .side-nav a {
+        padding: 8px 14px;
+        font-size: 15px;
+    }
+
+    .about-image {
+    width: 94%;
+    height: 175px;
+}
+
+    .about-text {
+    width: 92%;
+    padding: 42px 17px 18px;
+}
+
+    .content-image {
+    width: 92%;
+    height: 190px;
+}
+
+    .content-card {
+    width: 92%;
+    padding: 18px 16px;
+}
+
+    .scroll-profile {
+        font-size: 20px;
+    }
+
+    .scroll-links {
+        gap: 7px;
+    }
+
+    .scroll-links a {
+        font-size: 0.65rem;
+    }
+
+}
+

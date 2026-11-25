@@ -1,6 +1,6 @@
 const tracks = [
     {
-        title: "Song 1",
+        title: "cancionnn lol",
         artist: "Artist",
         album: "Album name",
         audio: "music/audio/song1.mp3",

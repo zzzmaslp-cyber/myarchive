@@ -530,3 +530,111 @@ footer p {
         padding: 10px;
     }
 }
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 800px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    .myspace {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    /* HEADER */
+
+    .top {
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .top nav {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* PERFIL */
+
+    .profile-header {
+        padding: 15px;
+    }
+
+    .profile-header h1 {
+        font-size: 28px;
+    }
+
+    /* COLUMNAS */
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+
+    /* FOTO */
+
+    .profile-picture {
+        max-width: 250px;
+        margin: 0 auto 15px;
+    }
+
+    /* TOP 8 */
+
+    .top-eight {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* COMENTARIOS */
+
+    .comment {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .myspace {
+        width: 97%;
+        margin: 10px auto;
+    }
+
+    .top {
+        font-size: 11px;
+    }
+
+    .profile-header h1 {
+        font-size: 23px;
+    }
+
+    .box {
+        padding: 10px;
+    }
+
+    .top-eight {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .friend-img {
+        aspect-ratio: 1 / 1;
+    }
+
+    .comment-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+}
